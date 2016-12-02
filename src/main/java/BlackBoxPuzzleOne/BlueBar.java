@@ -4,6 +4,11 @@ public class BlueBar implements Bar{
 	
 	public float maxLen = 16;
 	public float currenCursor = 0;
+	public float offset;
+	
+//	public BlueBar(float offset){
+//		this.offset = offset;
+//	}
 	
 	public void setMaxLen(float a){
 		maxLen = a;
@@ -32,7 +37,9 @@ public class BlueBar implements Bar{
 
 	@Override
 	public Float increment() {
-		return null;
+		currenCursor += this.offset;
+		System.out.println(currenCursor);
+		return currenCursor;
 	}
 	
 	public Float increment(float f){
@@ -43,8 +50,9 @@ public class BlueBar implements Bar{
 
 	@Override
 	public Float decrement() {
-		// TODO Auto-generated method stub
-		return null;
+		currenCursor -= this.offset;
+		System.out.println(currenCursor);
+		return currenCursor;
 	}
 	
 	public Float decrement(float f){

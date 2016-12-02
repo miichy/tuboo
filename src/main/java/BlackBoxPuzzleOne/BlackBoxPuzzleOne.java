@@ -9,12 +9,11 @@ public class BlackBoxPuzzleOne {
 	public static void main(String[] args) {
 		YellowButton yb = new YellowButton();
 		GreyLen gl = new GreyLen();
-		RedBar rb = new RedBar();
+		RedBar rb = new RedBar();   
 		BlueBar bb  = new BlueBar();
 		
 		gl.setLen(16);
 		float firstAdd = (float) gl.getLen()/16;
-		System.out.println("====" + firstAdd);
 		float twoAdd = firstAdd * 2;
 		float threeAdd = firstAdd * 4;
 		float fourAdd = firstAdd * 8;
